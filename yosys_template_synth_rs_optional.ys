@@ -1,0 +1,2 @@
+read_verilog $verilog_file_name
+synth -lut 6 -flatten -top $top_module_name

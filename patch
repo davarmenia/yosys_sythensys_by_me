@@ -1,0 +1,21 @@
+diff --git a/makefile b/makefile
+new file mode 100644
+index 0000000..4719613
+--- /dev/null
++++ b/makefile
+@@ -0,0 +1,14 @@
++IDIR =/home/utilities/json/include
++CC=gcc
++CINCLFLAGS=-I$(IDIR)
++CXXVERFLAGS=-std=c++17
++CXXTHRFLAGS=-lpthread
++
++output: Source.o
++	g++ Source.o -o output $(CXXTHRFLAGS) $(CXXVERFLAGS) $(CINCLFLAGS)
++
++Source.o: Source.cpp
++	g++ -c Source.cpp $(CXXTHRFLAGS) $(CXXVERFLAGS) $(CINCLFLAGS)
++
++clean: 
++	rm *.o output
+\ No newline at end of file
